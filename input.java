@@ -100,11 +100,6 @@ class input {
                     + "\n4: Skrive alle lagrede data til fil");
                     svar = input.nextInt();
                 }
-
-                System.out.println("\nHovedmeny: \n0: Skriv ut elementer" //Bolk for aa loope tilbake til hovedmenyen
-                + "\n1: Legge til nye elementer \n2: Bruk resept \n3: Skriv ut statistikk"
-                + "\n4: Skrive alle lagrede data til fil");
-                svar = input.nextInt();
             }
 
             else if (svar == 2) { // Lag 2
