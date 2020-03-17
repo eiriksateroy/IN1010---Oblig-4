@@ -62,17 +62,37 @@ class input {
 
                 else if (svar2 == 3) {  //Lag 2.2 - Legemiddel
                     input.nextLine();
+                    System.out.println("\nHvilken type legemiddel? \n0: Vanlig"
+                    + "\n1: Narkotisk \n2: Vanedannende");
+                    int type = input.nextInt();
+                    input.nextLine();
                     System.out.println("\nNavn paa legemiddel: ");
                     String navn = input.nextLine();
+                    System.out.println("\nPris (double): ");
+                    Double pris = input.nextDouble();
+                    System.out.println("\nVirkstoffmengde (double): ");
+                    Double virkestoffmengde = input.nextDouble();
+                    System.out.println("\nStyrke (int). Vanlig legemiddel, 0 ");
+                    int styrke = input.nextInt();
 
-                    //Denne er ikke helt ferdig
-                    //Legemiddel legemiddel = new Legemiddel();
-                    //Og ogsaa legge til legemiddelet i lista
+                    if (type == 0) {
+                        Vanlig vanlig = new Vanlig(navn, pris, virkestoffmengde);
+                        //Og ogsaa legger til legemiddlet i lista
+                    }
 
+                    else if (type == 1) {
+                        Narkotisk narkotisk = new Narkotisk(navn, pris, virkestoffmengde, styrke);
+                        //Og ogsaa legger til legemiddlet i lista
+                    }
+
+                    else if (type == 2) {
+                        Vanedannende vanedannende = new Vanedannende(navn, pris, virkestoffmengde, styrke);
+                        //Og ogsaa legger til legemiddlet i lista
+                    }
                     System.out.println("Dette legger til ett legemiddel");//Midlertidig
                 }
 
-                else {                  //Lag 2.2
+                else {                  //Lag 2.2 - Feil input
                     System.out.println("Feil input. Begynner paa nytt\n");
 
                     System.out.println("\nHovedmeny: \n0: Skriv ut elementer" //Bolk for aa loope tilbake til hovedmenyen
